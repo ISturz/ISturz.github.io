@@ -11,11 +11,14 @@ header {
     background: #000;
     color: #fff;
     padding: 1em 0;
+    
 }
 
 header h1 {
     margin: 0;
 }
+
+
 
 header nav ul {
     list-style: none;
@@ -44,145 +47,6 @@ header nav ul li a:hover{
     margin: auto;
     padding: 0 2em;
     
-}
-
-
-
-
-
-/* CSS for the about section */
-#about {
-    color: #fff;
-    width: 100%;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 5%;
-}
-
-#about h1 {
-    margin-bottom: 1em;
-}
-
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    max-width: 1100px; /* Optional: Adjust max-width to your preference */
-    margin-top: 2em; /* Adjust spacing between heading and content */
-}
-
-.about-text {
-    width: calc(50% - 1em); /* Adjust width based on desired spacing */
-    margin-right: 1em; /* Adjust spacing between text and image */
-}
-
-#aboutPara {
-    font-size: 18px;
-    max-width: 100%; /* Ensure text doesn't exceed container width */
-}
-
-.about-image {
-    width: calc(50% - 1em); /* Adjust width based on desired spacing */
-    margin-left: 1em; /* Adjust spacing between text and image */
-    text-align: right; /* Align image to the right */
-}
-
-#aboutImg {
-    width: 100%; /* Ensure image takes up full width of its container */
-    max-width: 400px; /* Limit maximum width of the image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Makes the image round */
-    border: 3px solid #fff; /* Optional: Adds a white border around the image */
-}
-
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        text-align: center;
-    }
-
-    .about-text, .about-image {
-        width: 100%; /* Full width for text and image on smaller screens */
-        margin: 0; /* Remove margins for better stacking */
-    }
-
-    #aboutImg {
-        margin-top: 1em; /* Add space between image and text on smaller screens */
-    }
-}
-
-
-
-
-
-
-
-
-/* CSS for the about section */
-#projects {
-    margin-top: 5%;
-    color: #fff;
-    width: 100%;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-#about h1 {
-    margin-bottom: 1em;
-}
-
-.projects-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    max-width: 1100px; /* Optional: Adjust max-width to your preference */
-    margin-top: 2em; /* Adjust spacing between heading and content */
-}
-
-.projects-text {
-    width: calc(50% - 1em); /* Adjust width based on desired spacing */
-    margin-right: 1em; /* Adjust spacing between text and image */
-}
-
-#projectsPara {
-    font-size: 18px;
-    max-width: 100%; /* Ensure text doesn't exceed container width */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-}
-
-footer p {
-    margin: 0;
 }
 
 
@@ -237,6 +101,8 @@ footer p {
     background-color: #ffeb3b;
 }
 
+
+
 .drop {
     position: absolute;
     width: 1px;
@@ -256,3 +122,180 @@ footer p {
         opacity: 0;
     }
 }
+
+
+
+
+
+/* Lightning Effect*/
+
+.lightning {
+    position: absolute;
+    background-color: white;
+    z-index: 1; /* Ensure lightning appears behind the raindrops but in front of the overlay */
+    animation: flash 0.2s ease-out;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* CSS for the about section */
+#about {
+    color: #fff;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+#about h1 {
+    margin-bottom: 1em;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px; 
+    margin-top: 2em; 
+}
+
+.about-text {
+    width: calc(50% - 1em); 
+    margin-right: 1em; 
+}
+
+#aboutPara {
+    font-size: 18px;
+    max-width: 100%; 
+}
+
+.about-image {
+    width: calc(50% - 1em); /* Adjust width based on desired spacing */
+    margin-left: 1em; 
+    text-align: right; 
+}
+
+#aboutImg {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+    border-radius: 50%; 
+    border: 3px solid #fff; 
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
+    .about-text, .about-image {
+        width: 100%; 
+        margin: 0; 
+    }
+
+    #aboutImg {
+        margin-top: 1em; 
+    }
+}
+
+
+
+
+
+
+
+
+/* CSS for the Projects section */
+#projects {
+    margin-top: 5%;
+    color: #fff;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#about h1 {
+    margin-bottom: 1em;
+}
+
+.projects-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    max-width: 1100px; 
+    margin-top: 2em; 
+}
+
+.projects-text {
+    width: calc(50% - 1em); 
+    margin-right: 1em;
+}
+
+#projectsPara {
+    font-size: 18px;
+    max-width: 100%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
