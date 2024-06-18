@@ -6,8 +6,16 @@ function createRaindrop() {
     const raindrop = document.createElement('div');
     raindrop.className = 'drop';
     raindrop.style.left = `${random(0, window.innerWidth)}px`;
-    raindrop.style.top = `${random(-100, -10)}px`; // Start above the visible area
+    raindrop.style.top = `${random(-100, -20)}px`; // Start above the visible area
+    raindrop.style.animationDuration = `${random(2, 5)}s`; // Adjust this range to change speed
+    raindrop.style.animationDelay = `${random(0, 5)}s`; // Randomize start time
     document.getElementById('rain').appendChild(raindrop);
+
+    // Remove the raindrop after its animation ends to avoid cluttering the DOM
+    raindrop.addEventListener('animationend', function() {
+        raindrop.remove();
+        createRaindrop(); // Create a new raindrop to maintain the rain effect
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {

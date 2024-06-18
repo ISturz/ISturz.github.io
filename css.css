@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000;
+    overflow-x: hidden;
 }
 
 header {
@@ -240,7 +241,9 @@ footer p {
     width: 1px; /* Width of each raindrop */
     height: 10px; /* Length of each raindrop */
     background-color: #99c4d6; /* Color of raindrops */
-    animation: fall linear infinite; /* Animation for falling */
+    z-index: 2; /* Ensure raindrops are on top of other elements */
+    animation: fall linear infinite;
+    animation-duration: 2s; /* Default duration for raindrop fall */
     transform-origin: center; /* Set the transform origin to center */
 }
 
