@@ -194,6 +194,7 @@ footer p {
     justify-content: center;
     text-align: center;
     color: #fff;
+    overflow: hidden; /* Prevent scroll due to raindrops */
 }
 
 #title-page .overlay {
@@ -224,7 +225,7 @@ footer p {
 #title-page .title-content .btn {
     display: inline-block;
     padding: 1em 2em;
-    background-color: #ffc107; /* Change to your desired button background color */
+    background-color: #ffc107;
     color: #333;
     text-decoration: none;
     border-radius: 5px;
@@ -232,27 +233,25 @@ footer p {
 }
 
 #title-page .title-content .btn:hover {
-    background-color: #ffeb3b; /* Change to your desired hover button background color */
+    background-color: #ffeb3b;
 }
-
 
 .drop {
     position: absolute;
-    width: 1px; /* Width of each raindrop */
-    height: 10px; /* Length of each raindrop */
-    background-color: #99c4d6; /* Color of raindrops */
+    width: 1px;
+    height: 10px;
+    background-color: #99c4d6;
     z-index: 2; /* Ensure raindrops are on top of other elements */
     animation: fall linear infinite;
-    animation-duration: 2s; /* Default duration for raindrop fall */
-    transform-origin: center; /* Set the transform origin to center */
 }
 
-/* Animation for falling effect */
 @keyframes fall {
     0% {
-        transform: translateY(-10px); /* Starting position above the screen */
+        transform: translateY(-100px); /* Start above the viewport */
+        opacity: 1;
     }
     100% {
-        transform: translateY(100vh); /* Ending position below the screen */
+        transform: translateY(100vh);
+        opacity: 0;
     }
 }
