@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 1em 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover{
+    color:aqua;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2em;
+    
+}
+
+
+
+
+
+/* CSS for the about section */
+#about {
+    color: #fff;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#about h1 {
+    margin-bottom: 1em;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    max-width: 1100px; /* Optional: Adjust max-width to your preference */
+    margin-top: 2em; /* Adjust spacing between heading and content */
+}
+
+.about-text {
+    width: calc(50% - 1em); /* Adjust width based on desired spacing */
+    margin-right: 1em; /* Adjust spacing between text and image */
+}
+
+#aboutPara {
+    font-size: 18px;
+    max-width: 100%; /* Ensure text doesn't exceed container width */
+}
+
+.about-image {
+    width: calc(50% - 1em); /* Adjust width based on desired spacing */
+    margin-left: 1em; /* Adjust spacing between text and image */
+    text-align: right; /* Align image to the right */
+}
+
+#aboutImg {
+    width: 100%; /* Ensure image takes up full width of its container */
+    max-width: 400px; /* Limit maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image round */
+    border: 3px solid #fff; /* Optional: Adds a white border around the image */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
+    .about-text, .about-image {
+        width: 100%; /* Full width for text and image on smaller screens */
+        margin: 0; /* Remove margins for better stacking */
+    }
+
+    #aboutImg {
+        margin-top: 1em; /* Add space between image and text on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+/* CSS for the about section */
+#projects {
+    margin-top: 10%;
+    color: #fff;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#about h1 {
+    margin-bottom: 1em;
+}
+
+.projects-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    max-width: 1100px; /* Optional: Adjust max-width to your preference */
+    margin-top: 2em; /* Adjust spacing between heading and content */
+}
+
+.projects-text {
+    width: calc(50% - 1em); /* Adjust width based on desired spacing */
+    margin-right: 1em; /* Adjust spacing between text and image */
+}
+
+#projectsPara {
+    font-size: 18px;
+    max-width: 100%; /* Ensure text doesn't exceed container width */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+#title-page {
+    position: relative;
+    height: 100vh;
+    background-color: #000736;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+#title-page .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#title-page .title-content {
+    z-index: 1;
+}
+
+#title-page .title-content h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+#title-page .title-content p {
+    font-size: 1.5em;
+    margin: 1em 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+#title-page .title-content .btn {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #ffc107; /* Change to your desired button background color */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#title-page .title-content .btn:hover {
+    background-color: #ffeb3b; /* Change to your desired hover button background color */
+}
+
+
+.drop {
+    position: absolute;
+    width: 1px; /* Width of each raindrop */
+    height: 10px; /* Length of each raindrop */
+    background-color: #99c4d6; /* Color of raindrops */
+    animation: fall linear infinite; /* Animation for falling */
+    transform-origin: center; /* Set the transform origin to center */
+}
+
+/* Animation for falling effect */
+@keyframes fall {
+    0% {
+        transform: translateY(-10px); /* Starting position above the screen */
+    }
+    100% {
+        transform: translateY(100vh); /* Ending position below the screen */
+    }
+}
