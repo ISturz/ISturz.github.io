@@ -60,6 +60,7 @@ header nav ul li a:hover{
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 5%;
 }
 
 #about h1 {
@@ -125,7 +126,7 @@ header nav ul li a:hover{
 
 /* CSS for the about section */
 #projects {
-    margin-top: 10%;
+    margin-top: 5%;
     color: #fff;
     width: 100%;
     padding: 2em;
