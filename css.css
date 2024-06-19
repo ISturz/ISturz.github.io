@@ -382,10 +382,36 @@ hr{
 
 /* Contact CSS Here */
 
-#contact{
+#contact {
     text-align: center;
     color: white;
-    text-decoration: none;
+    background-color: #333; /* Background color for contrast */
+    padding: 40px 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px auto; /* Center the section with margins */
+    max-width: 600px; /* Limit the width of the contact section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+
+}
+
+#contact h1 {
+    margin-bottom: 20px;
+    font-size: 2em; /* Increase the font size for the heading */
+    color: #ffcc00; /* Custom color for the heading */
+}
+
+#contact p {
+    font-size: 1.2em; /* Increase the font size for paragraphs */
+    margin: 10px 0; /* Space between paragraphs */
+}
+
+#contact a {
+    color: #ffcc00; /* Custom color for the email link */
+    text-decoration: none; /* Remove the underline */
+}
+
+#contact a:hover {
+    text-decoration: underline; /* Add underline on hover for clarity */
 }
 
 
