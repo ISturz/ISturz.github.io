@@ -6,12 +6,12 @@ function createRaindrop() {
     const raindrop = document.createElement('div');
     raindrop.className = 'drop';
     raindrop.style.left = `${random(0, window.innerWidth)}px`;
-    raindrop.style.top = `${random(-120, -10)}px`; // To Start above the visible area
-    raindrop.style.animationDuration = `${random(1, 1000)}ms`; // Adjust this range to change speed
-    raindrop.style.animationDelay = `${random(0, 10)}s`; // Randomize start time
+    raindrop.style.top = `${random(-120, -10)}px`;
+    raindrop.style.animationDuration = `${random(1, 1000)}ms`; // speed
+    raindrop.style.animationDelay = `${random(0, 10)}s`; // start time
     document.getElementById('rain').appendChild(raindrop);
 
-    // Remove the raindrop after its animation ends to avoid cluttering the DOM
+    
     raindrop.addEventListener('animationend', function() {
         raindrop.remove();
         createRaindrop(); // Create a new raindrop to maintain the rain effect
@@ -24,12 +24,16 @@ function createLightning() {
     lightning.style.left = `${random(0, window.innerWidth)}px`;
     lightning.style.top = `${random(0, 1)}px`;
     lightning.style.height = `${random(50, window.innerHeight)}px`; // Randomize the height between 50px and the full height of the viewport
-    lightning.style.width = `${random(1, 4)}px`;
+    lightning.style.width = `${random(150, 500)}px`;
     document.getElementById('rain').appendChild(lightning);
+
 
     // Remove the lightning after its animation ends to avoid cluttering the DOM
     lightning.addEventListener('animationend', function() {
         lightning.remove();
+        
+        // Log creation for debugging
+        console.log('Lightning created at:', lightning.style.left, lightning.style.top, lightning.style.height, lightning.style.width);
     });
 
     // Schedule the next lightning flash
@@ -67,4 +71,5 @@ document.addEventListener('DOMContentLoaded', function() {
         createRaindrop();
     }
     createLightning(); //To Start the effecr
+    
 });
