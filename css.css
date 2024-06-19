@@ -131,7 +131,7 @@ header nav ul li a:hover{
 
 .lightning {
     position: absolute;
-    background-color: white;
+    background-color: #fff5cf;
     z-index: 1; /* Ensure lightning appears behind the raindrops but in front of the overlay */
     animation: flash 0.3s ease-out;
 }
