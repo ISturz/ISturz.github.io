@@ -37,6 +37,31 @@ function createLightning() {
 }
 
 
+    // Function to toggle the description of the project
+    function toggleDescription(projectElement) {
+        const activeProject = document.querySelector('.project.active');
+
+        // If there is an active project that is not the one being clicked, collapse it
+        if (activeProject && activeProject !== projectElement) {
+            activeProject.classList.remove('active');
+        }
+
+        // Toggle the active state of the clicked project
+        projectElement.classList.toggle('active');
+    }
+
+    // Add event listeners to all projects
+    document.querySelectorAll('.project').forEach(project => {
+        project.addEventListener('click', function(event) {
+            // Check if the clicked element is the image or the project container
+            if (event.target.tagName === 'IMG' || event.target.classList.contains('project')) {
+                toggleDescription(project); // Toggle the description
+            }
+        });
+    });
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < 100; i++) {
         createRaindrop();

@@ -107,7 +107,7 @@ header nav ul li a:hover{
     position: absolute;
     width: 1px;
     height: 10px;
-    background-color: #99c4d6;
+    background-color: #fff;
     z-index: 2; /* Ensure raindrops are on top of other elements */
     animation: fall linear infinite;
 }
@@ -133,7 +133,7 @@ header nav ul li a:hover{
     position: absolute;
     background-color: white;
     z-index: 1; /* Ensure lightning appears behind the raindrops but in front of the overlay */
-    animation: flash 0.2s ease-out;
+    animation: flash 0.3s ease-out;
 }
 
 @keyframes flash {
@@ -173,7 +173,7 @@ header nav ul li a:hover{
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 5%;
+    
 }
 
 #about h1 {
@@ -231,47 +231,98 @@ header nav ul li a:hover{
 }
 
 
+hr{
+    margin:  10%;
+}
 
 
+/*CSS for Projects Section */
 
 
-
-
-/* CSS for the Projects section */
 #projects {
-    margin-top: 5%;
-    color: #fff;
-    width: 100%;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 20px;
+    color: white;
     text-align: center;
 }
 
-#about h1 {
-    margin-bottom: 1em;
+.project-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+    gap: 20px; /* Spacing between grid items */
+    justify-content: center; /* Center align grid items */
 }
 
-.projects-content {
+.project {
+    background-color: #888;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3 ease-in-out;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; 
-    max-width: 1100px; 
-    margin-top: 2em; 
+    flex-direction: column;
 }
 
-.projects-text {
-    width: calc(50% - 1em); 
-    margin-right: 1em;
+.description {
+    display: none;
+    background-color: #f9f9f9;
+    color:#000;
+    margin: 80px;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    width: 50%;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
 }
 
-#projectsPara {
-    font-size: 18px;
-    max-width: 100%; 
+.project.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
 }
+
+.project.active .description {
+    display: block;
+    width: 50%;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: black;
+
+
+}
+
+.project img {
+    width: 100%; /* Make the image fill its container */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.project.active img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin-top: 5%;
+}
+
+.project.active h3 {
+    display: none;
+}
+
+
+
+
 
 
 

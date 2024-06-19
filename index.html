@@ -58,13 +58,74 @@
     <div id="projects" class="container">
         <h1>My Projects</h1>
         <div class="projects-content">
-            <div class="projects-text">
-                <p id="projectPara">
-                    
-                </p>
-            </div>
-            <div class="about-image">
-                <!--<img id="aboutImg" src="img/isaac.jpg" alt="Image of Isaac Sturzaker">-->
+            <section id="projects">
+            
+                <div class="project-grid">
+                    <div class="project" onclick="toggleDescription(this)">
+                        <h3>EOS</h3>
+                        <img src="img/EOS.PNG" alt="EOS Image">
+                        <div class="description">
+                            <h1>Email Obfuscation System</h1>
+                            <p>
+                                Email Obfuscation System is an application made by a team of four including myself. 
+                                This application was created for our final Capstone project. Over 17 weeks my team and I,
+                                planned, designed, developed, tested and released this application. 
+                                <br>
+                                <br>
+                                The EOS application was created on Visual Studio using C#, HTML, CSS, while the database was created using MongoDB. My team and I followed an Agile-Scrum Methodology, we had four 4-week sprints and used Jira to track our progress.
+                                <br>
+                                <br>
+                                Email Obfuscation System is an application that allows a registed user to generate an EOS email address. 
+                                These generated emails are linked to the users primary email address and allow the user to register for other sites/applications using the generated address.
+                                Any emails recieved by the generated email address will be forward from our domain to the users primary address. From the users perspective, they still recieve the emails in their primary inbox.
+                                However, if there was to be a data leak on that site or application that the user registed for, or they were reciving spam, the user can simply make their was into our application,
+                                and diactivate the generated email address.
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="project" onclick="toggleDescription(this)">
+                        <h3>Shiny Side-Up</h3>
+                        <img src="img/ShinySideUp.PNG" alt="ShinySideUp Image">
+                        <div class="description">
+                            <h1>Shiny Side Up</h1>
+                            <p>EOS project description goes here.</p>
+                        </div>
+                    </div>
+            
+                    <div class="project" onclick="toggleDescription(this)">
+                        <h3>Lion Vs Cheetah</h3>
+                        <img src="img/LionVsCheetah.PNG" alt="LionVsCheetah Image">
+                        <div class="description">
+                            <p>EOS project description goes here.</p>
+                        </div>
+                    </div>
+            
+                    <div class="project" onclick="toggleDescription(this)">
+                        <h3>Tower Defense</h3>
+                        <img src="img/TowerGame.PNG" alt="Tower Defense Image">
+                        <div class="description">
+                            <p>EOS project description goes here.</p>
+                        </div>
+                    </div>
+            
+                    <div class="project" onclick="toggleDescription(this)">
+                        <h3>2D Platform Runner</h3>
+                        <img src="img/2dGame.PNG" alt="2D Game Image">
+                        <div class="description">
+                            <p>EOS project description goes here.</p>
+                        </div>
+                    </div>
+            
+                    <div class="project" onclick="toggleDescription(this)">
+                        <h3>Project 6</h3>
+                        <img src="project6.jpg" alt="Project 6 Image">
+                        <div class="description">
+                            <p>EOS project description goes here.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             </div>
         </div>
     </div>
