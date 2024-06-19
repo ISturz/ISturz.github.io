@@ -177,6 +177,7 @@ header nav ul li a:hover{
 }
 
 #about h1 {
+    font-size: 35px;
     margin-bottom: 1em;
 }
 
@@ -195,7 +196,7 @@ header nav ul li a:hover{
 }
 
 #aboutPara {
-    font-size: 18px;
+    font-size: 20px;
     max-width: 100%; 
 }
 
@@ -213,26 +214,27 @@ header nav ul li a:hover{
     border: 3px solid #fff; 
 }
 
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        text-align: center;
-    }
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+        .about-content {
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .about-text, .about-image {
-        width: 100%; 
-        margin: 0; 
-    }
+        .about-content img {
+            width: 100%; /* Full width for the image on smaller screens */
+            max-width: 300px;
+        }
 
-    #aboutImg {
-        margin-top: 1em; 
+        .about-content .text {
+            width: 100%; /* Full width for the text on smaller screens */
+            max-width: none;
+        }
     }
-}
 
 
 hr{
-    margin:  10%;
+    margin:  8%;
 }
 
 
@@ -240,7 +242,7 @@ hr{
 
 
 #projects {
-    padding: 20px;
+    
     color: white;
     text-align: center;
 }
@@ -319,6 +321,74 @@ hr{
 .project.active h3 {
     display: none;
 }
+
+
+
+ /* Responsive design for tablets and larger mobile screens */
+ @media (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+
+    .project.active {
+        flex-direction: column; /* Column layout for active project */
+    }
+
+    .project.active img {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height */
+        margin-top: 0; /* No margin */
+    }
+
+    .project.active .description {
+        width: 100%; /* Full width for description */
+        padding: 20px;
+        margin: 0; /* No margin */
+    }
+}
+
+
+
+
+
+ /* Responsive design */
+ @media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+
+    .project.active {
+        flex-direction: column; /* Column layout for active project */
+    }
+
+    .project.active img {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Auto height */
+        margin-top: 0; /* No margin */
+    }
+
+    .project.active .description {
+        width: 100%; /* Full width for description */
+        padding: 20px;
+        margin: 0; /* No margin */
+    }
+}
+
+
+
+
+
+
+
+/* Contact CSS Here */
+
+#contact{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+
 
 
 
